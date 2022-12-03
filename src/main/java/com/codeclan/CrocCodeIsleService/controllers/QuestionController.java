@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class QuestionController {
 
@@ -19,9 +21,13 @@ public class QuestionController {
         return new ResponseEntity<>(questionRepository.findAll(), HttpStatus.OK);
     }
 
+
     @GetMapping(value = "/questions/{id}")
-    public ResponseEntity getQuestionOfId(@PathVariable int id){
-        return new ResponseEntity<>(questionRepository.getByQuestionIslandEquals(id), HttpStatus.OK);
+    public ResponseEntity getQuestionsOfThisIsland(@PathVariable long id){
+        return new ResponseEntity<>(questionRepository.findQuestionByQuestionIslandId(id), HttpStatus.OK);
     }
+
+
+
 
 }

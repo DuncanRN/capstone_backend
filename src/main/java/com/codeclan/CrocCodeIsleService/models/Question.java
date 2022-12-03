@@ -18,6 +18,10 @@ public class Question {
     private QuestionIsland questionIsland;
 // DUNCAN'S concern - this is an object of QuestionIsland class. What is swapping it over into just the question_island_id  XXXXX
 
+
+    @Column(name = "question_position")
+    private int question_position;
+
     @Column(name = "question_type")
     private String question_type;
 
@@ -39,8 +43,9 @@ public class Question {
     @Column(name = "correct_response")
     private int correct_response;
 
-    public Question(QuestionIsland questionIsland, String question_type, String question_text, int points_value, String response1, String response2, String response3, String response4, int correct_response) {
+    public Question(QuestionIsland questionIsland, int question_position, String question_type, String question_text, int points_value, String response1, String response2, String response3, String response4, int correct_response) {
         this.questionIsland = questionIsland;
+        this.question_position = question_position;
         this.question_type = question_type;
         this.question_text = question_text;
         this.points_value = points_value;
@@ -67,6 +72,14 @@ public class Question {
 
     public void setQuestionIsland(QuestionIsland questionIsland) {
         this.questionIsland = questionIsland;
+    }
+
+    public int getQuestion_position() {
+        return question_position;
+    }
+
+    public void setQuestion_position(int question_position) {
+        this.question_position = question_position;
     }
 
     public String getQuestion_type() {

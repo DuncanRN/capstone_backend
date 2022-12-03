@@ -32,7 +32,7 @@ public class DataLoader implements ApplicationRunner {
         QuestionIsland questionIsland1 = new QuestionIsland("Python","Question number one");
         questionIslandRepository.save(questionIsland1);
 
-        Question question1 = new Question(questionIsland1, "normal",
+        Question question1 = new Question(questionIsland1, 1, "normal",
                 "How do you iterate in Python?", 2,
                 "for x in range",
                 "loop(x : range)",
@@ -41,7 +41,7 @@ public class DataLoader implements ApplicationRunner {
                 1);
         questionRepository.save(question1);
 
-        Question question2 = new Question(questionIsland1, "normal",
+        Question question2 = new Question(questionIsland1, 2, "normal",
                 "How do we deliniate the body of a loop?", 5,
                 "()",
                 "{}",
@@ -50,6 +50,29 @@ public class DataLoader implements ApplicationRunner {
                 4);
         questionRepository.save(question2);
 
+
+        Question question3 = new Question(questionIsland1, 3, "normal",
+                "Example text in a question?", 10,
+                "answer one",
+                "maybe this is right",
+                "but this is throwing me off",
+                "oh no",
+                1);
+        questionRepository.save(question3);
+
+        // now for island 2
+
+        QuestionIsland questionIsland2 = new QuestionIsland("Python","Question number two");
+        questionIslandRepository.save(questionIsland2);
+
+        Question question4 = new Question(questionIsland2, 1, "normal",
+                "First question of second island?", 10,
+                "aaaaaa",
+                "bbbbbbb",
+                "cccccccc",
+                "dddddddd",
+                1);
+        questionRepository.save(question4);
 
 
 
