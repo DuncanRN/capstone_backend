@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
 @RestController
 public class QuestionController {
 
@@ -21,13 +20,18 @@ public class QuestionController {
         return new ResponseEntity<>(questionRepository.findAll(), HttpStatus.OK);
     }
 
-
     @GetMapping(value = "/questions/{id}")
     public ResponseEntity getQuestionsOfThisIsland(@PathVariable long id){
         return new ResponseEntity<>(questionRepository.findQuestionByQuestionIslandId(id), HttpStatus.OK);
     }
 
+    // The following mapping works. I wanted to copy it and comment it out before I make it return the questions in island order, question_order order
+//    @GetMapping(value = "/questions/{id}")
+//    public ResponseEntity getQuestionsOfThisIsland(@PathVariable long id){
+//        return new ResponseEntity<>(questionRepository.findQuestionByQuestionIslandId(id), HttpStatus.OK);
+//    }
 
 
 
+//
 }

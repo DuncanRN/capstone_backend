@@ -13,5 +13,8 @@ public interface QuestionRepository extends JpaRepository<Question, Long>{
 
 
 
+//    List<Qu
+//this workedestion> findQuestionByQuestionIslandId(long id);
+
 //    List<Question> getByQuestionIsland(long islandId);
 }
