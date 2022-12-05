@@ -1,20 +1,18 @@
 package com.codeclan.CrocCodeIsleService.controllers;
 
+import com.codeclan.CrocCodeIsleService.models.User;
 import com.codeclan.CrocCodeIsleService.repositories.QuestionRepository;
 import com.codeclan.CrocCodeIsleService.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
 
     @Autowired
     UserRepository userRepository;
-
 
     @GetMapping(value = "/users")
     public ResponseEntity getAllUsers(){
@@ -35,6 +33,20 @@ public class UserController {
     public ResponseEntity getUserOfThisId(@PathVariable long id){
         return new ResponseEntity<>(userRepository.findUserById(id), HttpStatus.OK);
     }
+
+
+    // the followingn Patch / Update is untested
+    @PatchMapping(value = "users/{id}")
+    public ResponseEntity<User> updateUser(@RequestBody User user){
+        userRepository.save(user);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
+//    @PatchMapping(value = "/pirates/{id}")
+//    public ResponseEntity<Pirate> updatePirate(@RequestBody Pirate pirate){
+//        pirateRepository.save(pirate);
+//        return new ResponseEntity<>(pirate, HttpStatus.OK);
+//    }
 
 
 

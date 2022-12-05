@@ -16,8 +16,6 @@ public class Question {
     @JsonBackReference
     @JoinColumn(name = "question_island_id", nullable = false)
     private QuestionIsland questionIsland;
-// DUNCAN'S concern - this is an object of QuestionIsland class. What is swapping it over into just the question_island_id  XXXXX
-
 
     @Column(name = "question_position")
     private int question_position;
