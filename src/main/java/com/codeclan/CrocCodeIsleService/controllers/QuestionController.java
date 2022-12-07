@@ -20,6 +20,8 @@ public class QuestionController {
         return new ResponseEntity<>(questionRepository.findAll(), HttpStatus.OK);
     }
 
+
+
     @GetMapping(value = "/questions/{id}")
     public ResponseEntity getQuestionsOfThisIsland(@PathVariable long id){
         return new ResponseEntity<>(questionRepository.findQuestionByQuestionIslandId(id), HttpStatus.OK);

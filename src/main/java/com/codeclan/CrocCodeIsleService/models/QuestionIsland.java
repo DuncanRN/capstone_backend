@@ -32,7 +32,6 @@ public class QuestionIsland {
 
     public QuestionIsland(){}
 
-
     public Long getId() {
         return id;
     }

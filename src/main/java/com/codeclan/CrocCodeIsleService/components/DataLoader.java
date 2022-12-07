@@ -31,7 +31,7 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) {
 
 
-        QuestionIsland questionIsland1 = new QuestionIsland("Python","Question number one");
+        QuestionIsland questionIsland1 = new QuestionIsland("Python","Island number one");
         questionIslandRepository.save(questionIsland1);
 
         // here we are putting question 2 in before question 1. This is for a test to see if we can keep them
@@ -66,7 +66,7 @@ public class DataLoader implements ApplicationRunner {
 
         // now for island 2
 
-        QuestionIsland questionIsland2 = new QuestionIsland("Python","Question number two");
+        QuestionIsland questionIsland2 = new QuestionIsland("Python","Island 2");
         questionIslandRepository.save(questionIsland2);
 
         Question question4 = new Question(questionIsland2, 1, "normal",
@@ -77,6 +77,104 @@ public class DataLoader implements ApplicationRunner {
                 "dddddddd",
                 1);
         questionRepository.save(question4);
+
+        Question question5 = new Question(questionIsland2, 2, "normal",
+                "2nd question of second island?", 10,
+                "eee",
+                "fff",
+                "gg",
+                "hh",
+                1);
+        questionRepository.save(question5);
+
+        Question question6 = new Question(questionIsland2, 3, "normal",
+                "3rd question of second island?", 10,
+                "iii",
+                "jjj",
+                "kkk",
+                "lll",
+                1);
+        questionRepository.save(question6);
+
+
+
+
+        // now for island 3
+
+        QuestionIsland questionIsland3 = new QuestionIsland("Python","Island 3");
+        questionIslandRepository.save(questionIsland3);
+
+        Question question7 = new Question(questionIsland3, 1, "normal",
+                "First question of 3rd island?", 10,
+                "aaaaaa",
+                "bbbbbbb",
+                "cccccccc",
+                "dddddddd",
+                1);
+        questionRepository.save(question7);
+
+        Question question8 = new Question(questionIsland3, 2, "normal",
+                "2nd question of 3rd island?", 10,
+                "eee",
+                "fff",
+                "gg",
+                "hh",
+                1);
+        questionRepository.save(question8);
+
+        Question question9 = new Question(questionIsland3, 3, "normal",
+                "3rd question of 3rd island?", 10,
+                "iii",
+                "jjj",
+                "kkk",
+                "lll",
+                1);
+        questionRepository.save(question9);
+
+
+
+
+
+
+
+        // ______
+        // Java time!
+        //_____
+
+
+        // now for island 3
+
+        QuestionIsland questionIsland4 = new QuestionIsland("Java","Island 1");
+        questionIslandRepository.save(questionIsland4);
+
+        Question question10 = new Question(questionIsland4, 1, "normal",
+                "First question of 4rd island?", 10,
+                "aaaaaa",
+                "bbbbbbb",
+                "cccccccc",
+                "dddddddd",
+                1);
+        questionRepository.save(question10);
+
+        Question question11 = new Question(questionIsland4, 2, "normal",
+                "2nd question of 4rd island?", 10,
+                "eee",
+                "fff",
+                "gg",
+                "hh",
+                1);
+        questionRepository.save(question11);
+
+        Question question12 = new Question(questionIsland4, 3, "normal",
+                "3rd question of 4rd island?", 10,
+                "iii",
+                "jjj",
+                "kkk",
+                "lll",
+                1);
+        questionRepository.save(question12);
+
+
 
         // USERS
 
