@@ -36,7 +36,7 @@ public class DataLoader implements ApplicationRunner {
 
 
         Question question1 = new Question(questionIsland1, 1, "multiple_choice",
-                "Output the string: _____('Hello')", 2,
+                "Output the string: \n _____('Hello')", 2,
                 "print",
                 "console",
                 "system.out",
@@ -45,7 +45,7 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(question1);
 
         Question question2 = new Question(questionIsland1, 2, "fill_blank",
-                "Declare the variable: colin _ 'crocodile'", 5,
+                "Declare the variable: \n colin _ 'crocodile'", 5,
                 "is a",
                 "-",
                 "=",
@@ -54,7 +54,7 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(question2);
 
         Question question3 = new Question(questionIsland1, 3, "text_input",
-                "Output variable value: palm = 'tree' print (____) ", 10,
+                "Output variable value: \n palm = 'tree' \n print (____) ", 10,
                 "palm",
                 "",
                 "",
@@ -68,7 +68,7 @@ public class DataLoader implements ApplicationRunner {
         questionIslandRepository.save(questionIsland2);
 
         Question question4 = new Question(questionIsland2, 1, "multiple_choice",
-                "Select data type of value: 1.5", 10,
+                "Select data type of value: \n 1.5", 10,
                 "integer",
                 "string",
                 "thing",
@@ -77,7 +77,7 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(question4);
 
         Question question5 = new Question(questionIsland2, 2, "fill_blank",
-                "Concatenate the strings: 'coco' ___ 'nut'", 10,
+                "Concatenate the strings: \n 'coco' ___ 'nut'", 10,
                 "*",
                 "+",
                 "and",
@@ -86,7 +86,7 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(question5);
 
         Question question6 = new Question(questionIsland2, 3, "text_input",
-                "Enter the result: print((5 % 3) * 3)", 10,
+                "Enter the result: \n print((5 % 3) * 3)", 10,
                 "6",
                 "",
                 "",
@@ -103,7 +103,7 @@ public class DataLoader implements ApplicationRunner {
         questionIslandRepository.save(questionIsland3);
 
         Question question7 = new Question(questionIsland3, 1, "multiple_choice",
-                "Select output: coconuts = 3 if coconuts < 5: print (coconuts) ", 10,
+                "Select output: \n coconuts = 3 \n if coconuts < 5: \n \t print (coconuts) ", 10,
                 "3",
                 "5",
                 "coconuts",
@@ -112,7 +112,7 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(question7);
 
         Question question8 = new Question(questionIsland3, 2, "fill_blank",
-                "Choose correct keyword: if animal == 'crocodile': print ('in a while') ___ animal == 'alligator': print('see you later') else: print('Shark! Swim away!')", 10,
+                "Choose correct keyword: \n if animal == 'crocodile': \n \t print ('in a while') \n ___ animal == 'alligator': \n \t print('see you later') \n else: \n \t print('Shark! Swim away!')", 10,
                 "if",
                 "elif",
                 "or",
@@ -121,18 +121,13 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(question8);
 
         Question question9 = new Question(questionIsland3, 3, "text_input",
-                "Enter correct output: fruit = 'pineapple' if fruit == 'coconut': print('coconutty') else: print ('yum')", 10,
+                "Enter correct output: \n fruit = 'pineapple' \n if fruit == 'coconut': print('coconutty') else: print ('yum')", 10,
                 "yum",
                 "",
                 "",
                 "",
                 1);
         questionRepository.save(question9);
-
-
-
-
-
 
 
         // ______
@@ -142,11 +137,11 @@ public class DataLoader implements ApplicationRunner {
 
         // now for island 3
 
-        QuestionIsland questionIsland4 = new QuestionIsland("Java","Island 1");
+        QuestionIsland questionIsland4 = new QuestionIsland("Javascript","JS Island 1");
         questionIslandRepository.save(questionIsland4);
 
         Question question10 = new Question(questionIsland4, 1, "normal",
-                "First question of 4rd island?", 10,
+                "First question of 1st javascript island?", 10,
                 "aaaaaa",
                 "bbbbbbb",
                 "cccccccc",
@@ -155,7 +150,7 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(question10);
 
         Question question11 = new Question(questionIsland4, 2, "normal",
-                "2nd question of 4rd island?", 10,
+                "2nd question of 1st Javascipt island?", 10,
                 "eee",
                 "fff",
                 "gg",
@@ -164,17 +159,13 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(question11);
 
         Question question12 = new Question(questionIsland4, 3, "normal",
-                "3rd question of 4rd island?", 10,
+                "3rd question of 1st Javascipt island?", 10,
                 "iii",
                 "jjj",
                 "kkk",
                 "lll",
                 1);
         questionRepository.save(question12);
-
-        
-
-
 
         // USERS
 
