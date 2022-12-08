@@ -31,68 +31,66 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) {
 
 
-        QuestionIsland questionIsland1 = new QuestionIsland("Python","Island number one");
+        QuestionIsland questionIsland1 = new QuestionIsland("Python","Outputs and Variables");
         questionIslandRepository.save(questionIsland1);
 
-        // here we are putting question 2 in before question 1. This is for a test to see if we can keep them
-        // always in the right order through the derived methods in QuestionController
 
-        Question question1 = new Question(questionIsland1, 1, "normal",
-                "Q1 How do you iterate in Python?", 2,
-                "for x in range",
-                "loop(x : range)",
-                "doThisManyTimes(x in range)",
-                "something else ()",
+        Question question1 = new Question(questionIsland1, 1, "multiple_choice",
+                "Output the string: _____('Hello')", 2,
+                "print",
+                "console",
+                "system.out",
+                "output",
                 1);
         questionRepository.save(question1);
 
-        Question question2 = new Question(questionIsland1, 2, "normal",
-                "Q2 How do we deliniate the body of a loop?", 5,
-                "()",
-                "{}",
-                "[]",
-                "indentation",
-                4);
+        Question question2 = new Question(questionIsland1, 2, "fill_blank",
+                "Declare the variable: colin _ 'crocodile'", 5,
+                "is a",
+                "-",
+                "=",
+                ":",
+                3);
         questionRepository.save(question2);
 
-        Question question3 = new Question(questionIsland1, 3, "normal",
-                "Q3 Example text in a question?", 10,
-                "answer one",
-                "maybe this is right",
-                "but this is throwing me off",
-                "oh no",
+        Question question3 = new Question(questionIsland1, 3, "text_input",
+                "Output variable value: palm = 'tree' print (____) ", 10,
+                "palm",
+                "",
+                "",
+                "",
                 1);
         questionRepository.save(question3);
 
         // now for island 2
 
-        QuestionIsland questionIsland2 = new QuestionIsland("Python","Island 2");
+        QuestionIsland questionIsland2 = new QuestionIsland("Python","Data Types");
         questionIslandRepository.save(questionIsland2);
 
-        Question question4 = new Question(questionIsland2, 1, "normal",
-                "First question of second island?", 10,
-                "aaaaaa",
-                "bbbbbbb",
-                "cccccccc",
-                "dddddddd",
-                1);
+        Question question4 = new Question(questionIsland2, 1, "multiple_choice",
+                "Select data type of value: 1.5", 10,
+                "integer",
+                "string",
+                "thing",
+                "float",
+                4);
         questionRepository.save(question4);
 
-        Question question5 = new Question(questionIsland2, 2, "normal",
-                "2nd question of second island?", 10,
-                "eee",
-                "fff",
-                "gg",
-                "hh",
-                1);
+        Question question5 = new Question(questionIsland2, 2, "fill_blank",
+                "Concatenate the strings: 'coco' ___ 'nut'", 10,
+                "*",
+                "+",
+                "and",
+                "-",
+                2);
         questionRepository.save(question5);
 
-        Question question6 = new Question(questionIsland2, 3, "normal",
-                "3rd question of second island?", 10,
-                "iii",
-                "jjj",
-                "kkk",
-                "lll",
+        Question question6 = new Question(questionIsland2, 3, "text_input",
+                "Enter the result: print((5 % 3) * 3)", 10,
+                "6",
+                "",
+                "",
+                "",
                 1);
         questionRepository.save(question6);
 
@@ -101,33 +99,33 @@ public class DataLoader implements ApplicationRunner {
 
         // now for island 3
 
-        QuestionIsland questionIsland3 = new QuestionIsland("Python","Island 3");
+        QuestionIsland questionIsland3 = new QuestionIsland("Python","Conditional Logic");
         questionIslandRepository.save(questionIsland3);
 
-        Question question7 = new Question(questionIsland3, 1, "normal",
-                "First question of 3rd island?", 10,
-                "aaaaaa",
-                "bbbbbbb",
-                "cccccccc",
-                "dddddddd",
+        Question question7 = new Question(questionIsland3, 1, "multiple_choice",
+                "Select output: coconuts = 3 if coconuts < 5: print (coconuts) ", 10,
+                "3",
+                "5",
+                "coconuts",
+                "error",
                 1);
         questionRepository.save(question7);
 
-        Question question8 = new Question(questionIsland3, 2, "normal",
-                "2nd question of 3rd island?", 10,
-                "eee",
-                "fff",
-                "gg",
-                "hh",
-                1);
+        Question question8 = new Question(questionIsland3, 2, "fill_blank",
+                "Choose correct keyword: if animal == 'crocodile': print ('in a while') ___ animal == 'alligator': print('see you later') else: print('Shark! Swim away!')", 10,
+                "if",
+                "elif",
+                "or",
+                "otherwise",
+                2);
         questionRepository.save(question8);
 
-        Question question9 = new Question(questionIsland3, 3, "normal",
-                "3rd question of 3rd island?", 10,
-                "iii",
-                "jjj",
-                "kkk",
-                "lll",
+        Question question9 = new Question(questionIsland3, 3, "text_input",
+                "Enter correct output: fruit = 'pineapple' if fruit == 'coconut': print('coconutty') else: print ('yum')", 10,
+                "yum",
+                "",
+                "",
+                "",
                 1);
         questionRepository.save(question9);
 
@@ -173,6 +171,8 @@ public class DataLoader implements ApplicationRunner {
                 "lll",
                 1);
         questionRepository.save(question12);
+
+        
 
 
 
