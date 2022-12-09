@@ -42,6 +42,12 @@ public class UserController {
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
+    @PostMapping(value="/users")
+    public ResponseEntity<User> postUser(@RequestBody User user){
+        userRepository.save(user);
+        return new ResponseEntity<>(user, HttpStatus.CREATED);
+    }
+
 //    @PatchMapping(value = "/pirates/{id}")
 //    public ResponseEntity<Pirate> updatePirate(@RequestBody Pirate pirate){
 //        pirateRepository.save(pirate);

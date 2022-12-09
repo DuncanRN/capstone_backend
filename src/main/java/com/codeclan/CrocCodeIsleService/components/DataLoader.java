@@ -57,7 +57,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question3 = new Question(questionIsland1, 3, "text_input",
                 "Output variable value:",
-                "palm = 'tree' \n print (____) ", 30,
+                "palm = 'tree' \n print (____)", 30,
                 "palm",
                 "",
                 "",
@@ -120,7 +120,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question8 = new Question(questionIsland3, 2, "fill_blank",
                 "Choose correct keyword:",
-                "if animal == 'crocodile': \n \t print ('in a while') \n ___ animal == 'alligator': \n \t print('see you later') \n else: \n \t print('Shark! Swim away!')",
+                "if animal == 'crocodile': \n \t print ('in a while') \n ___ animal == 'alligator': \n \t print('see you later') \n else: \n \t print('Shark! Swim  away!')",
                 80,
                 "if",
                 "elif",
