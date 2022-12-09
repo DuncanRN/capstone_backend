@@ -110,7 +110,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question7 = new Question(questionIsland3, 1, "multiple_choice",
                 "Select output:",
-                "coconuts = 3 \n if coconuts < 5: \n \t print (coconuts) ", 70,
+                "coconuts = 3 \nif coconuts < 5: \n \t print (coconuts) ", 70,
                 "3",
                 "5",
                 "coconuts",
