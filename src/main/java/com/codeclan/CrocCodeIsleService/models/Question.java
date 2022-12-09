@@ -26,6 +26,9 @@ public class Question {
     @Column(name = "question_text")
     private String question_text;
 
+    @Column(name = "question_code")
+    private String question_code;
+
     @Column(name = "points_value")
     private int points_value;
 
@@ -41,11 +44,12 @@ public class Question {
     @Column(name = "correct_response")
     private int correct_response;
 
-    public Question(QuestionIsland questionIsland, int question_position, String question_type, String question_text, int points_value, String response1, String response2, String response3, String response4, int correct_response) {
+    public Question(QuestionIsland questionIsland, int question_position, String question_type, String question_text, String question_code, int points_value, String response1, String response2, String response3, String response4, int correct_response) {
         this.questionIsland = questionIsland;
         this.question_position = question_position;
         this.question_type = question_type;
         this.question_text = question_text;
+        this.question_code = question_code;
         this.points_value = points_value;
         this.response1 = response1;
         this.response2 = response2;
@@ -142,5 +146,14 @@ public class Question {
 
     public void setCorrect_response(int correct_response) {
         this.correct_response = correct_response;
+    }
+
+
+    public String getQuestion_code() {
+        return question_code;
+    }
+
+    public void setQuestion_code(String question_code) {
+        this.question_code = question_code;
     }
 }
