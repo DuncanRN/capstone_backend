@@ -37,7 +37,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question1 = new Question(questionIsland1, 1, "multiple_choice",
                 "Output the string:",
-                "\n _____('Hello')", 10,
+                "_____('Hello')", 10,
                 "print",
                 "console",
                 "system.out",
@@ -47,7 +47,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question2 = new Question(questionIsland1, 2, "fill_blank",
                 "Declare the variable:",
-                "\n colin _ 'crocodile'", 20,
+                "colin _ 'crocodile'", 20,
                 "is a",
                 "-",
                 "=",
@@ -57,7 +57,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question3 = new Question(questionIsland1, 3, "text_input",
                 "Output variable value:",
-                "\n palm = 'tree' \n print (____) ", 30,
+                "palm = 'tree' \n print (____) ", 30,
                 "palm",
                 "",
                 "",
@@ -72,7 +72,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question4 = new Question(questionIsland2, 1, "multiple_choice",
                 "Select data type of value:",
-                "\n 1.5", 40,
+                "1.5", 40,
                 "integer",
                 "string",
                 "thing",
@@ -82,7 +82,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question5 = new Question(questionIsland2, 2, "fill_blank",
                 "Concatenate the strings:",
-                "\n 'coco' ___ 'nut'", 50,
+                "'coco' ___ 'nut'", 50,
                 "*",
                 "+",
                 "and",
@@ -92,7 +92,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question6 = new Question(questionIsland2, 3, "text_input",
                 "Enter the result:",
-                "\n print((5 % 3) * 3)", 60,
+                "print((5 % 3) * 3)", 60,
                 "6",
                 "",
                 "",
@@ -110,7 +110,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question7 = new Question(questionIsland3, 1, "multiple_choice",
                 "Select output:",
-                "\n coconuts = 3 \n if coconuts < 5: \n \t print (coconuts) ", 70,
+                "coconuts = 3 \n if coconuts < 5: \n \t print (coconuts) ", 70,
                 "3",
                 "5",
                 "coconuts",
@@ -120,7 +120,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question8 = new Question(questionIsland3, 2, "fill_blank",
                 "Choose correct keyword:",
-                "\n if animal == 'crocodile': \n \t print ('in a while') \n ___ animal == 'alligator': \n \t print('see you later') \n else: \n \t print('Shark! Swim away!')",
+                "if animal == 'crocodile': \n \t print ('in a while') \n ___ animal == 'alligator': \n \t print('see you later') \n else: \n \t print('Shark! Swim away!')",
                 80,
                 "if",
                 "elif",
@@ -131,7 +131,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question9 = new Question(questionIsland3, 3, "text_input",
                 "Enter correct output:",
-                "\n fruit = 'pineapple' \n if fruit == 'coconut': print('coconutty') else: print ('yum')",
+                "fruit = 'pineapple' \n if fruit == 'coconut': print('coconutty') else: print ('yum')",
                 90,
                 "yum",
                 "",
