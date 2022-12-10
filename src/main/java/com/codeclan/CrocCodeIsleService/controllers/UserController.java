@@ -47,16 +47,19 @@ public class UserController {
     }
 
 
-    // the following Patch / Update is untested
-    @PatchMapping(value = "users/points/{id}/{points}/")
-    public ResponseEntity<User> partialUpdatePoints(@PathVariable("id") long id, @PathVariable("points") int points){
-//        , @PathVariable("id") long id, @PathVariable("name") String name
 
-        System.out.println("id: " + id );
+    // the following Patch / Update is untested
+    @PatchMapping(value = "users/points/{name}/{points}/")
+    public ResponseEntity<User> partialUpdatePoints(@PathVariable("name") String name, @PathVariable("points") int points){
+//        , @PathVariable("id") long id, @PathVariable("name") String name
 
         System.out.println("points: " + points );
 
-        User user = userRepository.findUserById(id);
+        System.out.println("name: " + name );
+
+//        User user = userRepository.findUserById(id);
+
+        User user = userRepository.findUserByName(name);
 
         System.out.println("user: " + user );
 

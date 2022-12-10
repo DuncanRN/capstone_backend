@@ -9,15 +9,9 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-
     List<User> findTop10ByOrderByPointsDesc();
-
     List<User> findTop5ByOrderByPointsDesc();
     User findUserById(long id);
-
-    List<User> findUserByName(String name);
-
-
-
+    User findUserByName(String name);
 
 }
