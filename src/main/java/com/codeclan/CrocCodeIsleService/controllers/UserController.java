@@ -14,8 +14,6 @@ import java.util.List;
 @RestController
 public class UserController {
 
-
-
     @Autowired
     UserRepository userRepository;
 
@@ -40,10 +38,17 @@ public class UserController {
         return new ResponseEntity<>(userRepository.findUserById(id), HttpStatus.OK);
     }
 
-
     @GetMapping(value = "/users/name/{name}")
     public ResponseEntity getUserOfThisName(@PathVariable String name){
         return new ResponseEntity<>(userRepository.findUserByName(name), HttpStatus.OK);
+    }
+
+    // an update mapping
+
+    @PutMapping(value = "/users/name/{name}")
+    public ResponseEntity getUserOfThisName(@PathVariable String name){
+        System.out.println("name: " + name );
+//      return new ResponseEntity<>(userRepository.findUserByName(name), HttpStatus.OK);
     }
 
 
@@ -71,6 +76,10 @@ public class UserController {
 
         final User updatedUser = userRepository.save(user);
 
+
+        return new ResponseEntity<>(HttpStatus.OK);
+
+
 //        System.out.println("userList: " + userList );
 
 //        List<User> setPointsById(int points, long id){
@@ -80,7 +89,9 @@ public class UserController {
 //        userRepository.setPointsById(points, id);
 //        userRepository.save(points, id);
 //        return ResponseEntity.ok("resource address updated");
-        return new ResponseEntity<>(HttpStatus.OK);
+
+
+
 //        return ResponseEntity.ok(updatedUser, HttpStatus.OK);
     }
 
