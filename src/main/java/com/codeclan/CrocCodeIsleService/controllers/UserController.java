@@ -48,19 +48,15 @@ public class UserController {
 
 
     // the following Patch / Update is untested
-    @PatchMapping(value = "users/points/{id}/{points}/{name}")
-    public ResponseEntity<User> partialUpdatePoints(@PathVariable("id") long id, @PathVariable("points") int points, @PathVariable("name") String name){
+    @PatchMapping(value = "users/points/{id}/{points}/")
+    public ResponseEntity<User> partialUpdatePoints(@PathVariable("id") long id, @PathVariable("points") int points){
 //        , @PathVariable("id") long id, @PathVariable("name") String name
 
         System.out.println("id: " + id );
 
         System.out.println("points: " + points );
 
-        System.out.println("name: " + name );
-
         User user = userRepository.findUserById(id);
-
-//        User user = userList.get(0);
 
         System.out.println("user: " + user );
 
