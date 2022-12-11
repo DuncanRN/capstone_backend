@@ -43,14 +43,35 @@ public class UserController {
         return new ResponseEntity<>(userRepository.findUserByName(name), HttpStatus.OK);
     }
 
-    // an update mapping
+    @PutMapping(value = "/users/")
+    public ResponseEntity updateUserOfThisName(@RequestBody User user){
 
-    @PutMapping(value = "/users/name/{name}")
-    public ResponseEntity getUserOfThisName(@PathVariable String name){
-        System.out.println("name: " + name );
-//      return new ResponseEntity<>(userRepository.findUserByName(name), HttpStatus.OK);
+//        System.out.println(" I am HERE! I am in PutMapping");
+//        System.out.println(" user : " + user);
+//        System.out.println(" user name : " + user.getName());
+//        System.out.println(" user points : " + user.getPoints());
+
+        // =========================================================
+        // IMPORTANT NOTE ABOUT UNDERSTANDING WHAT IS IMPORTANT HERE
+        // =========================================================
+        // we previously had the issue of instead of changing the user in the db. we were making a new one
+        // with the new score.
+        // So now we get the id from the database by the user's unique name
+        // assign that id to the user we have been handed to this method
+        //
+        // then when we do save(user) that save knows to do an UPDATE rather than an INSERT
+        // because a user of that id already exists!
+
+        User userFromDB = userRepository.findUserByName(user.getName());
+
+//        System.out.println(" userIdFromDB : " + userFromDB.getId());
+
+        user.setId(userFromDB.getId());
+
+        final User updatedUser = userRepository.save(user);
+
+        return new ResponseEntity<>(updatedUser, HttpStatus.OK);
     }
-
 
 
     // the following Patch / Update is untested
@@ -60,7 +81,7 @@ public class UserController {
 
         System.out.println("points: " + points );
 
-        System.out.println("name: " + name );
+//        System.out.println("name: " + name );
 
 //        User user = userRepository.findUserById(id);
 
