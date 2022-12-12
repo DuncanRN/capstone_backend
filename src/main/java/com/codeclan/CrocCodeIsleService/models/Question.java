@@ -13,7 +13,7 @@ public class Question {
     private Long id;
 
     @ManyToOne
-//    @JsonBackReference
+    @JsonBackReference
     @JoinColumn(name = "question_island_id", nullable = false)
     private QuestionIsland questionIsland;
 

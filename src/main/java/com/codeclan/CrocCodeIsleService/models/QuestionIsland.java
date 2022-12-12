@@ -24,7 +24,7 @@ public class QuestionIsland {
 
     // questions <Question>
     @OneToMany(mappedBy = "questionIsland", fetch = FetchType.LAZY)
-    @JsonBackReference
+//    @JsonBackReference
     private List<Question> questions;
 
     public QuestionIsland(String language, String name) {
