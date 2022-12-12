@@ -1,8 +1,10 @@
 package com.codeclan.CrocCodeIsleService.components;
 
+import com.codeclan.CrocCodeIsleService.models.IslandsCompleted;
 import com.codeclan.CrocCodeIsleService.models.Question;
 import com.codeclan.CrocCodeIsleService.models.QuestionIsland;
 import com.codeclan.CrocCodeIsleService.models.User;
+import com.codeclan.CrocCodeIsleService.repositories.IslandsCompletedRepository;
 import com.codeclan.CrocCodeIsleService.repositories.QuestionIslandRepository;
 import com.codeclan.CrocCodeIsleService.repositories.QuestionRepository;
 import com.codeclan.CrocCodeIsleService.repositories.UserRepository;
@@ -22,6 +24,9 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    IslandsCompletedRepository islandsCompletedRepository;
 
 
     public DataLoader() {
@@ -206,5 +211,16 @@ public class DataLoader implements ApplicationRunner {
         User user11 = new User("Ally", 10);
         userRepository.save(user11);
 
+        IslandsCompleted duncanFinishedIslandOne = new IslandsCompleted(user1, questionIsland1);
+        islandsCompletedRepository.save(duncanFinishedIslandOne);
+
+
+        IslandsCompleted louiseFinishedIslandOne = new IslandsCompleted(user2, questionIsland1);
+        islandsCompletedRepository.save(louiseFinishedIslandOne);
+        IslandsCompleted louiseFinishedIslandTwo = new IslandsCompleted(user2, questionIsland2);
+        islandsCompletedRepository.save(louiseFinishedIslandTwo);
+
+        IslandsCompleted cammyFinishedIslandOne = new IslandsCompleted(user3, questionIsland1);
+        islandsCompletedRepository.save(cammyFinishedIslandOne);
     }
 }

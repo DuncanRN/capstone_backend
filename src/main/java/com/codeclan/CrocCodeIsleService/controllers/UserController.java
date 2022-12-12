@@ -77,13 +77,8 @@ public class UserController {
     // the following Patch / Update is untested
     @PatchMapping(value = "users/points/{name}/{points}/")
     public ResponseEntity<User> partialUpdatePoints(@PathVariable("name") String name, @PathVariable("points") int points){
-//        , @PathVariable("id") long id, @PathVariable("name") String name
 
         System.out.println("points: " + points );
-
-//        System.out.println("name: " + name );
-
-//        User user = userRepository.findUserById(id);
 
         User user = userRepository.findUserByName(name);
 
@@ -100,49 +95,9 @@ public class UserController {
 
         return new ResponseEntity<>(HttpStatus.OK);
 
-
-//        System.out.println("userList: " + userList );
-
-//        List<User> setPointsById(int points, long id){
-//            @Query("UPDATE users SET points = {points} WHERE id={id};")
-//        }
-//
-//        userRepository.setPointsById(points, id);
-//        userRepository.save(points, id);
-//        return ResponseEntity.ok("resource address updated");
-
-
-
-//        return ResponseEntity.ok(updatedUser, HttpStatus.OK);
     }
 
 
-//    @PatchMapping("/users/{id}")
-//    public ResponseEntity<User> updateUserPartially(
-//            @PathVariable(value = "id") Long userId,
-//            @Valid @RequestBody User userDetails) throws ResourceNotFoundException {
-//        User user = userRepository.findById(userId)
-//                .orElseThrow(() -> new ResourceNotFoundException("User not found on :: "+ userId));
-//
-//        user.setEmailId(userDetails.getEmailId());
-//        user.setUpdatedAt(new Date());
-//        final User updatedUser = userRepository.save(user);
-//        return ResponseEntity.ok(updatedUser);
-//    }
-
-
-
-//    @PatchMapping("/heavyresource/{id}")
-//    public ResponseEntity<?> partialUpdateName(
-//            @RequestBody HeavyResourceAddressOnly partialUpdate, @PathVariable("id") String id) {
-//
-//        heavyResourceRepository.save(partialUpdate, id);
-//        return ResponseEntity.ok("resource address updated");
-//    }
-
-
-
-    // ____
 
     @PostMapping(value="/users")
     public ResponseEntity<User> postUser(@RequestBody User user){
