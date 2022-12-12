@@ -147,41 +147,112 @@ public class DataLoader implements ApplicationRunner {
 
 
         // ______
-        // Java time!
+        // Javascript time!
         //_____
 
 
-        // now for island 3
+        // now for island 4
 
-        QuestionIsland questionIsland4 = new QuestionIsland("Javascript","JS Island 1");
+        QuestionIsland questionIsland4 = new QuestionIsland("Javascript","Outputs and Variables");
         questionIslandRepository.save(questionIsland4);
 
-        Question question10 = new Question(questionIsland4, 1, "normal",
-                "First question of 1st javascript island?", "code example", 10,
-                "aaaaaa",
-                "bbbbbbb",
-                "cccccccc",
-                "dddddddd",
-                1);
+        Question question10 = new Question(questionIsland4, 1, "multiple_choice",
+                "Output the string:", "_____('Crocodiles are cool!'", 10,
+                "system.out",
+                "console.log",
+                "print",
+                "write",
+                2);
         questionRepository.save(question10);
 
-        Question question11 = new Question(questionIsland4, 2, "normal",
-                "2nd question of 1st Javascipt island?", "code example", 20,
-                "eee",
-                "fff",
-                "gg",
-                "hh",
+        Question question11 = new Question(questionIsland4, 2, "fill_blank",
+                "Declare the variable:", "_____ clyde = 'crocodile'", 20,
+                "const",
+                "this",
+                "variable",
+                "string",
                 1);
         questionRepository.save(question11);
 
-        Question question12 = new Question(questionIsland4, 3, "normal",
-                "3rd question of 1st Javascipt island?", "code example", 30,
-                "iii",
-                "jjj",
-                "kkk",
-                "lll",
-                1);
+        Question question12 = new Question(questionIsland4, 3, "text_input",
+                "Output variable value: ", "const coconuts = 'tasty' \n console.log(_____)", 30,
+                "coconuts",
+                "",
+                "",
+                "",
+                3);
         questionRepository.save(question12);
+
+        // now for island 5
+
+        QuestionIsland questionIsland5 = new QuestionIsland("Javascript","Data Types");
+        questionIslandRepository.save(questionIsland5);
+
+        Question question13 = new Question(questionIsland5, 1, "multiple_choice",
+                "Select data type of value:", "true", 10,
+                "string",
+                "integer",
+                "boolean",
+                "undefined",
+                3);
+        questionRepository.save(question13);
+
+        Question question14 = new Question(questionIsland5, 2, "fill_blank",
+                "What is the output?", "const coco = 'nuts' \n console.log(!coco)", 20,
+                "nuts",
+                "coconuts",
+                "true",
+                "false",
+                4);
+        questionRepository.save(question14);
+
+        Question question15 = new Question(questionIsland5, 3, "text_input",
+                "Log the variable's value:", "const shark = 'Swim away!'", 30,
+                "console.log(shark)",
+                "",
+                "",
+                "",
+                1);
+        questionRepository.save(question15);
+
+        QuestionIsland questionIsland6 = new QuestionIsland("Javascript","Conditional Logic");
+        questionIslandRepository.save(questionIsland6);
+
+        Question question16 = new Question(questionIsland6, 1, "multiple_choice",
+                "Select output:",
+                "const crocodiles = 5 \nif (crocodiles > 2) {\n \t console.log(crocodiles)}", 70,
+                "true",
+                "5",
+                "crocodiles",
+                "false",
+                2);
+        questionRepository.save(question16);
+
+        Question question17 = new Question(questionIsland6, 2, "fill_blank",
+                "Choose correct keyword:",
+                "if (animal == 'crocodile') { \n \t console.log('in a while') \n _____ { console.log('No crocodile found!' }" ,
+                80,
+                "else if",
+                "elif",
+                "else",
+                "if",
+                3);
+        questionRepository.save(question17);
+
+        Question question18 = new Question(questionIsland6, 3, "text_input",
+                "Enter correct output:",
+                "const crocus = 'dill' \n if (crocus != 'dill') { console.log('crocodile!') } else { console.log('flowers')",
+                90,
+                "flowers",
+                "",
+                "",
+                "",
+                1);
+        questionRepository.save(question18);
+
+
+
+
 
         // USERS
 
