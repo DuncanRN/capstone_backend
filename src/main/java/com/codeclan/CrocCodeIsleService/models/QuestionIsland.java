@@ -1,5 +1,7 @@
 package com.codeclan.CrocCodeIsleService.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +23,8 @@ public class QuestionIsland {
     private String name;
 
     // questions <Question>
-    @OneToMany(mappedBy = "questionIsland", fetch = FetchType.LAZY) // Duncan has concerns here about this questionIsland variable. XXXXX
+    @OneToMany(mappedBy = "questionIsland", fetch = FetchType.LAZY)
+//    @JsonBackReference
     private List<Question> questions;
 
     public QuestionIsland(String language, String name) {
