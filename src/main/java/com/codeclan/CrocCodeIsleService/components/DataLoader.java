@@ -259,28 +259,11 @@ public class DataLoader implements ApplicationRunner {
         User user1 = new User("Duncan", 0);
         userRepository.save(user1);
 
-        User user2 = new User("Louise", 1);
+        User user2 = new User("Louise", 0);
         userRepository.save(user2);
 
-        User user3 = new User("Cammy", 2);
+        User user3 = new User("Cammy", 0);
         userRepository.save(user3);
-
-        User user4 = new User("Matt", 3);
-        userRepository.save(user4);
-        User user5 = new User("Lucy", 4);
-        userRepository.save(user5);
-        User user6 = new User("Colin", 5);
-        userRepository.save(user6);
-        User user7 = new User("Jen", 6);
-        userRepository.save(user7);
-        User user8 = new User("Aqib", 7);
-        userRepository.save(user8);
-        User user9 = new User("Randolph", 8);
-        userRepository.save(user9);
-        User user10 = new User("Steve", 9);
-        userRepository.save(user10);
-        User user11 = new User("Ally", 10);
-        userRepository.save(user11);
 
         IslandsCompleted duncanFinishedIslandOne = new IslandsCompleted(user1, questionIsland1);
         islandsCompletedRepository.save(duncanFinishedIslandOne);
@@ -293,5 +276,8 @@ public class DataLoader implements ApplicationRunner {
 
         IslandsCompleted cammyFinishedIslandOne = new IslandsCompleted(user3, questionIsland1);
         islandsCompletedRepository.save(cammyFinishedIslandOne);
+
+
+
     }
 }
