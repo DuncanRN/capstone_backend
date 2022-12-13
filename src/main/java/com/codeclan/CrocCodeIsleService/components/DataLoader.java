@@ -230,7 +230,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question17 = new Question(questionIsland6, 2, "fill_blank",
                 "Choose correct keyword:",
-                "if (animal == 'crocodile') { \n \t console.log('in a while') \n _____ { console.log('No crocodile found!' }" ,
+                "if (animal == 'crocodile') { \n \t console.log('in a while') \n _____ { console.log('No crocodile found!') }" ,
                 80,
                 "else if",
                 "elif",
