@@ -157,7 +157,7 @@ public class DataLoader implements ApplicationRunner {
         questionIslandRepository.save(questionIsland4);
 
         Question question10 = new Question(questionIsland4, 1, "multiple_choice",
-                "Output the string:", "_____('Crocodiles are cool!'", 10,
+                "Output the string:", "_____('Crocodiles are cool!')", 10,
                 "system.out",
                 "console.log",
                 "print",
