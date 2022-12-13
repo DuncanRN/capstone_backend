@@ -241,7 +241,7 @@ public class DataLoader implements ApplicationRunner {
 
         Question question18 = new Question(questionIsland6, 3, "text_input",
                 "Enter correct output:",
-                "const crocus = 'dill' \n if (crocus != 'dill') { console.log('crocodile!') } else { console.log('flowers')",
+                "const crocus = 'dill' \n if (crocus != 'dill') { console.log('crocodile!') } else { console.log('flowers') }",
                 90,
                 "flowers",
                 "",
