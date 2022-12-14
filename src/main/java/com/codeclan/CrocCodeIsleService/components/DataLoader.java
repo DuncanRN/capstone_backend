@@ -265,6 +265,15 @@ public class DataLoader implements ApplicationRunner {
         User user3 = new User("Cammy", 0);
         userRepository.save(user3);
 
+        User user4 = new User("Matt", 0);
+        userRepository.save(user4);
+
+        User user5 = new User("Lucy", 0);
+        userRepository.save(user5);
+
+        User user6 = new User("Colin", 0);
+        userRepository.save(user6);
+
         IslandsCompleted duncanFinishedIslandOne = new IslandsCompleted(user1, questionIsland1);
         islandsCompletedRepository.save(duncanFinishedIslandOne);
 
